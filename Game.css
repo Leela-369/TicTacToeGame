@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    color: #000;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    z-index: 9999;
+}
+
+.message-container {
+    background-color: #130202;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.win-message {
+    text-align: center;
+    font-size: 5rem;
+    color: green;
+}
+
+.draw-message {
+    text-align: center;
+    font-size: 5rem;
+    color: blue;
+}
+
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    opacity: 1;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
